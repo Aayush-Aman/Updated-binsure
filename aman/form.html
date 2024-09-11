@@ -1,0 +1,311 @@
+<style>
+  .get-quote-form {
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+    margin-left: 300px;
+    align-items: center;
+    max-width: 849px;
+    padding: 22px 0 0;
+  }
+  @media (max-width: 1183px) {
+    .get-quote-form {
+      display: flex;
+      margin-left: 100px;
+      align-items: center;
+      max-width: 849px;
+      padding: 22px 0 0;
+    }
+  }
+
+  .form-container {
+    display: flex;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 -4px 6px 6px rgba(16, 24, 40, 0.03);
+    padding-left: 46px;
+  }
+
+  .form-content {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+  }
+
+  .form-fields {
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    color: #5a5555;
+    margin: auto 0;
+    font: 400 16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+
+  .field-label {
+    font-weight: 700;
+    line-height: 2;
+    align-self: start;
+  }
+
+  .input-field {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 15px;
+    width: 354px;
+    max-width: 100%;
+    font-family: Poppins, sans-serif;
+    padding: 22px 21px;
+    border: 1px solid #c0c0c0;
+  }
+
+  .select-wrapper {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    margin-top: 19px;
+    gap: 20px;
+    font-family: Poppins, sans-serif;
+    color: #5a5555;
+    line-height: 2;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid #c0c0c0;
+  }
+
+  .select-text {
+    margin: auto 0;
+  }
+
+  .select-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+
+  .phone-input-wrapper {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    margin-top: 16px;
+    gap: 9px;
+    font-family: Poppins, sans-serif;
+    padding: 15px;
+    border: 1px solid #c0c0c0;
+  }
+
+  .country-code {
+    display: flex;
+    gap: 3px;
+    white-space: nowrap;
+  }
+
+  .phone-input {
+    flex-grow: 1;
+    width: 244px;
+    flex-basis: auto;
+    margin: auto 0;
+  }
+
+  .submit-button {
+    border-radius: 50px;
+    background-color: #24bbe3;
+    margin-top: 24px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 22px 70px;
+    cursor: pointer;
+  }
+
+  .terms-agreement {
+    color: #5c6163;
+    font-family: Lora, sans-serif;
+    line-height: 27px;
+    margin-top: 16px;
+  }
+
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  .form-image {
+    margin-top: -64px;
+    margin-left: -10px;
+    aspect-ratio: 0.62;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 0 30px 30px 0;
+    z-index: 10;
+    flex-grow: 1;
+  }
+
+  .close-button {
+    margin-left: 370px;
+    color: white;
+    margin-top: 25px;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(60, 59, 59);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 50px;
+    z-index: 30;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 991px) {
+    .get-quote-form {
+      padding-right: 20px;
+    }
+
+    .form-container {
+      max-width: 100%;
+      padding-left: 20px;
+    }
+
+    .form-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .form-column {
+      width: 100%;
+    }
+
+    .form-fields {
+      margin-top: 40px;
+    }
+
+    .input-field,
+    .submit-button {
+      padding: 0 20px;
+    }
+
+    .select-wrapper {
+      margin-right: 2px;
+    }
+
+    .country-code {
+      white-space: initial;
+    }
+
+    .form-image {
+      margin-top: 24px;
+    }
+  }
+</style>
+
+<section class="get-quote-form">
+  <div class="form-container">
+    <div class="form-content">
+      <div class="form-column">
+        <form class="form-fields">
+          <label for="name" class="field-label">Your name</label>
+          <input
+            type="text"
+            id="name"
+            class="input-field"
+            placeholder="Your name"
+            aria-label="Your name"
+          />
+
+          <label for="planning" class="field-label">Planning to buy</label>
+         
+            <select class="select-wrapper" id="weeks">
+                
+                <option value="first">1-2 weeks</option>
+                <option value="two">2-3 weeks</option>
+                <option value="third">3-4 weeks</option>
+                <option value="fourth">4-5 weeks</option>
+                
+              </select>
+              
+            
+            
+
+          <label for="email" class="field-label">Email address</label>
+          <input
+            type="email"
+            id="email"
+            class="input-field"
+            placeholder="Email address"
+            aria-label="Email address"
+          />
+
+          <label for="phone" class="field-label"
+            >Contact number
+            <span aria-hidden="true" style="color: #c03744">*</span></label
+          >
+          <div class="phone-input-wrapper">
+            <div class="country-code">
+              <span>+40</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/94e1c3b3dd5ad643406488164a043336028259ee8f1549c947f3da9804d9dd82?placeholderIfAbsent=true&apiKey=2b52a2f46d7b444286ec7c5c16a85032"
+                alt=""
+                class="select-icon"
+              />
+            </div>
+            <input
+              type="tel"
+              id="phone"
+              class="phone-input"
+              placeholder="Contact number"
+              aria-label="Contact number"
+            />
+          </div>
+
+          <button type="submit" class="submit-button">Get a Free quote</button>
+
+          <p class="terms-agreement">
+            I agree to
+            <a href="#" style="text-decoration: underline">terms of use</a> and
+            <a href="#" style="text-decoration: underline">privacy policy</a>
+            when getting a free quote from
+          </p>
+        </form>
+      </div>
+      <div class="image-column">
+        <button class="close-button">×</button>
+        <img
+          src="assets\image.png"
+          alt="Illustration of a person working on a laptop"
+          class="form-image"
+        />
+      </div>
+    </div>
+  </div>
+      
+</section>
